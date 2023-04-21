@@ -1,0 +1,45 @@
+<div>
+    <div>
+        <label for="ptoMuestreo">Punto Muestreo </label>
+        <input type="text" name="ptoMuestreo" data-dojo-attach-point="selectProvincia"
+        data-dojo-attach-event="onclick:filtrarPuntos"
+        style="display:block;">>
+        <select 
+            name="" 
+            data-dojo-attach-point="selectProvincia"
+            data-dojo-attach-event="onChange:cargarConcellos"
+            style="display:block;">
+            <option value="-1">Seleccione una Provincia</option>
+            <option value="15" text="A Coruña">ACoruña</option>
+            <option value="27" text="Lugo">Lugo</option>
+            <option value="32" text="Ourense">Ourense</option>
+            <option value="36" text="Pontevedra">Pontevedra</option>
+        </select>
+    </div>
+    <div data-dojo-attach-point="concellos">
+        <label for="">Concello </label>
+        <select 
+            name="" 
+            data-dojo-attach-point="selectConcello"
+            data-dojo-attach-event="onChange:cargarParroquia"
+            style="display:block; width: 200px; color: rgb(0, 0, 0);">
+        </select>
+        <button
+            class="btnZoom"
+            data-dojo-attach-event="onclick:zoomConcellos">
+            <img src="widgets/Test_Xunta_Widget/images/lupa.png" alt="Lupa búsqueda" style="height: 15px;">
+        </button>
+    </div>
+    <div data-dojo-attach-point="parroquias">
+        <label for="">Parroquias </label>
+        <select 
+            name="" 
+            data-dojo-attach-point="selectParroquias"
+            style="display:block;">
+        </select>
+        <button
+            class="btnZoom">
+            <img src="widgets/Test_Xunta_Widget/images/lupa.png" alt="Lupa búsqueda" style="height: 15px;">
+        </button>
+    </div>
+</div>
