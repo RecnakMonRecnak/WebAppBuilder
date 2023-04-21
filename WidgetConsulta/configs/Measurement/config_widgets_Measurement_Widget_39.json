@@ -1,0 +1,12 @@
+{
+  "measurement": {
+    "defaultAreaUnit": "esriHectares",
+    "defaultLengthUnit": "esriNauticalMiles"
+  },
+  "showArea": true,
+  "showDistance": true,
+  "showLocation": true,
+  "defaultAreaUnit": "esriSquareKilometers",
+  "defaultLengthUnit": "esriKilometers",
+  "isOperationalLayer": true
+}

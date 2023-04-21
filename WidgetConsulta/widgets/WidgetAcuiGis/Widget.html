@@ -1,0 +1,61 @@
+<div class="container">
+    <h3>Índice de concentración de metales</h3>
+    <br>
+    <div>
+        <label for="pMuestreo">Estación de Muestreo: </label><br>
+        <select 
+            name="pMuestreo" 
+            data-dojo-attach-point="ptoMuestreo"
+            style="display:block; width: 200px;">
+            <option value="SP001">SP001</option>
+            <option value="SP002">SP002</option>
+            <option value="SP003">SP003</option>
+            <option value="SP004">SP004</option>
+            <option value="SP005">SP005</option>
+            <option value="SP006">SP006</option>
+            <option value="SP007">SP007</option>
+            <option value="SP008">SP008</option>
+            <option value="SP009">SP009</option>
+            <option value="SP011">SP011</option>
+            <option value="SP012">SP012</option>
+            <option value="SP013">SP013</option>
+        </select><br>
+    </div>
+    <div>
+        <label for="fechaM">Fecha: </label><br>
+        <select 
+            name="fechaM" 
+            data-dojo-attach-point="fch_muestreo"
+            style="display:block; width: 200px;">
+            <option value="20190108" text="1">08/01/2019</option>
+            <option value="20190122" text="2">22/01/2019</option>
+            <option value="20190206" text="3">06/02/2019</option>
+            <option value="20190220" text="4">20/02/2019</option>
+            <option value="20190305" text="5">05/03/2019</option> 
+            <option value="20190321" text="6">21/03/2019</option>
+            <option value="20190403" text="7">03/04/2019</option>
+            <option value="20190423" text="8">23/04/2019</option>
+            <option value="20190507" text="9">07/05/2019</option>
+            <option value="20190523" text="10">23/05/2019</option>
+            <option value="20190531" text="11">31/05/2019</option>
+            <option value="20190613" text="12">13/06/2019</option>
+        </select>
+    </div><br>
+    <div style="display: flex; gap: 20px;">
+        <div>
+            <button id="btn-caldera-pellets btn" type="button" class="btn btn-secondary btn-sm" data-dojo-attach-event="onclick:filtrarMuestreo">Buscar</button>
+        </div>
+        <div class="section-three">
+            <button id="btn-restaurar" type="button" class="btn btn-secondary btn-sm" data-dojo-attach-event="onclick:refresh">Restaurar Filtros</button>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div>
+        <br>
+        <label for="resultado">Valor partes por millón (ppm):</label>
+        <br>
+        <p id="resultado" name="resultado"></p>
+    </div>
+    
+</div>

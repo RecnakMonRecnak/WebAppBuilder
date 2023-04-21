@@ -1,0 +1,1003 @@
+{
+  "aoiTabText": "Área de Interés",
+  "reportTabText": "Informe",
+  "placenameButtonText": "Nombre de lugar",
+  "drawToolsButtonText": "Dibujar",
+  "shapefileButtonText": "Shapefile",
+  "coordinatesButtonText": "Coordenadas",
+  "showPlacenameWidget": true,
+  "showDrawToolsWidget": true,
+  "showShapefileWidget": false,
+  "showCoordinatesWidget": false,
+  "allowShapefilesUpload": false,
+  "areaUnits": "Hectares",
+  "maxFeaturesForAnalysis": 1000,
+  "searchTolerance": 20,
+  "traverseUnit": "uSSurveyFeet",
+  "traverseDirectionUnit": "decimalDegree",
+  "defaultBufferDistance": 0,
+  "defaultBufferUnit": "UNIT_METER",
+  "reportSettings": {
+    "printTaskURL": "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+    "footnote": "",
+    "logo": "${appPath}/widgets/Screening/images/default-logo.png",
+    "columnTitleColor": "#c6d9ec",
+    "reportTitle": "Screening Report",
+    "noDataConfiguredText": "No hay datos",
+    "naTextConfiguredValue": "N/A",
+    "customOptions": [],
+    "defaultPrintOption": "Letter ANSI A Portrait",
+    "displaySummaryInReport": true,
+    "hideZeroValueRow": false,
+    "hideNullValueRow": false
+  },
+  "searchSourceSettings": {
+    "allPlaceholder": "",
+    "showInfoWindowOnSelect": true,
+    "sources": [
+      {
+        "layerId": "61b61a8e28874492b409132a53e45de3",
+        "url": "https://services8.arcgis.com/BtkRLT3YBKaVGV3g/arcgis/rest/services/VISOR_ACUIGIS_WFL1/FeatureServer/3",
+        "name": "Estaciones_de_Monitoreo",
+        "placeholder": "",
+        "searchFields": [
+          "Pto_Muestreo"
+        ],
+        "displayField": "Pto_Muestreo",
+        "exactMatch": false,
+        "searchInCurrentMapExtent": false,
+        "maxSuggestions": 6,
+        "maxResults": 6,
+        "type": "query"
+      }
+    ]
+  },
+  "placenameSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "drawToolSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "shapefileSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "coordinatesSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "aoiSymbol": {
+    "color": [
+      255,
+      255,
+      255,
+      0
+    ],
+    "outline": {
+      "color": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "width": 1.5,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "type": "esriSFS",
+    "style": "esriSFSSolid"
+  },
+  "layers": [
+    {
+      "url": "https://services8.arcgis.com/BtkRLT3YBKaVGV3g/arcgis/rest/services/VISOR_ACUIGIS_WFL1/FeatureServer/42",
+      "geometryType": "esriGeometryPoint",
+      "id": "7074aff87b1f4dd28cf1a2096a9b27f0",
+      "label": "",
+      "layerName": "Concentracion_mercurio",
+      "layerVersion": 11,
+      "selectedFields": {
+        "Pto_Muestreo": {
+          "fieldName": "Pto_Muestreo",
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20170804": {
+          "fieldName": "F20170804",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20170818": {
+          "fieldName": "F20170818",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20170908": {
+          "fieldName": "F20170908",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20170929": {
+          "fieldName": "F20170929",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20171020": {
+          "fieldName": "F20171020",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20171110": {
+          "fieldName": "F20171110",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20171201": {
+          "fieldName": "F20171201",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20171219": {
+          "fieldName": "F20171219",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180109": {
+          "fieldName": "F20180109",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180130": {
+          "fieldName": "F20180130",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180213": {
+          "fieldName": "F20180213",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180228": {
+          "fieldName": "F20180228",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180321": {
+          "fieldName": "F20180321",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180404": {
+          "fieldName": "F20180404",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180426": {
+          "fieldName": "F20180426",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180512": {
+          "fieldName": "F20180512",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180517": {
+          "fieldName": "F20180517",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180530": {
+          "fieldName": "F20180530",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180612": {
+          "fieldName": "F20180612",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180628": {
+          "fieldName": "F20180628",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180710": {
+          "fieldName": "F20180710",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180725": {
+          "fieldName": "F20180725",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180808": {
+          "fieldName": "F20180808",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180822": {
+          "fieldName": "F20180822",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180831": {
+          "fieldName": "F20180831",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180913": {
+          "fieldName": "F20180913",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20180926": {
+          "fieldName": "F20180926",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20181009": {
+          "fieldName": "F20181009",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20181025": {
+          "fieldName": "F20181025",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20181101": {
+          "fieldName": "F20181101",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20181112": {
+          "fieldName": "F20181112",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20181122": {
+          "fieldName": "F20181122",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20181205": {
+          "fieldName": "F20181205",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20181218": {
+          "fieldName": "F20181218",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190108": {
+          "fieldName": "F20190108",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190122": {
+          "fieldName": "F20190122",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190206": {
+          "fieldName": "F20190206",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190220": {
+          "fieldName": "F20190220",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190305": {
+          "fieldName": "F20190305",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190321": {
+          "fieldName": "F20190321",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190403": {
+          "fieldName": "F20190403",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190423": {
+          "fieldName": "F20190423",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190507": {
+          "fieldName": "F20190507",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190523": {
+          "fieldName": "F20190523",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190531": {
+          "fieldName": "F20190531",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190613": {
+          "fieldName": "F20190613",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190625": {
+          "fieldName": "F20190625",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190709": {
+          "fieldName": "F20190709",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190723": {
+          "fieldName": "F20190723",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190802": {
+          "fieldName": "F20190802",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190831": {
+          "fieldName": "F20190831",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190910": {
+          "fieldName": "F20190910",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20190925": {
+          "fieldName": "F20190925",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20191008": {
+          "fieldName": "F20191008",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20191022": {
+          "fieldName": "F20191022",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20191104": {
+          "fieldName": "F20191104",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20191119": {
+          "fieldName": "F20191119",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20191129": {
+          "fieldName": "F20191129",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20191212": {
+          "fieldName": "F20191212",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        },
+        "F20191227": {
+          "fieldName": "F20191227",
+          "format": {
+            "digitSeparator": false,
+            "places": 6
+          },
+          "isEditable": true,
+          "label": null,
+          "visible": true
+        }
+      },
+      "layerId": "42",
+      "baseURL": "https://services8.arcgis.com/BtkRLT3YBKaVGV3g/arcgis/rest/services/VISOR_ACUIGIS_WFL1/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    }
+  ],
+  "showCircleTool": true,
+  "groupbyfieldCheckBoxStatus": true,
+  "allowVisibleLayerAnalysisOnly": false,
+  "lengthUnits": "Kilometers",
+  "downloadSettings": {
+    "type": "syncEnable",
+    "layers": [
+      {
+        "url": "https://services8.arcgis.com/BtkRLT3YBKaVGV3g/arcgis/rest/services/VISOR_ACUIGIS_WFL1/FeatureServer/42",
+        "layerName": "Concentracion_mercurio",
+        "id": "7074aff87b1f4dd28cf1a2096a9b27f0",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      }
+    ],
+    "extractDataTaskURL": "",
+    "downloadingFileOptions": [
+      "csv"
+    ]
+  },
+  "drawToolSelectableLayers": [
+    "f8859447c80e484399954a760d84b182",
+    "c613690d35b64318a600ed23b5434450",
+    "851fefae45c543fa844001203f48b444",
+    "61b61a8e28874492b409132a53e45de3",
+    "9d207547ad4d4ad9ae91c4c74e5dc6a3",
+    "3f7d30db3caf48f9a9324b03f38fca28",
+    "2b1f893159db48f9b82fa89fb06a55c0",
+    "00a10b48c3e54e118000c47a36008029",
+    "1879e15b619-layer-29",
+    "7074aff87b1f4dd28cf1a2096a9b27f0",
+    "76077c60195c4d7f9646eaf4764f3428"
+  ],
+  "showPointTool": true,
+  "showPolylineTool": true,
+  "showExtentTool": true,
+  "showPolygonTool": true
+}
