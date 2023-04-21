@@ -1,7 +1,7 @@
 {
   "measurement": {
     "defaultAreaUnit": "esriHectares",
-    "defaultLengthUnit": "esriNauticalMiles"
+    "defaultLengthUnit": "esriMeters"
   },
   "showArea": true,
   "showDistance": true,

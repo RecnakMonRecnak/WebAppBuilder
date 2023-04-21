@@ -4,19 +4,15 @@
   "loopPlay": true,
   "timeFormat": "auto",
   "isHonorWebMap": true,
-  "customLayersConfig": [
-    {
-      "id": "1682009975724r6766735158530484",
-      "isTimeEnable": true
-    }
-  ],
+  "customDateFormat": "",
+  "customLayersConfig": [],
   "customTimeConfig": {
     "keepValueFlag": false,
     "startTime": {
       "timeConfig": {
         "keepValueFlag": false,
         "timeMode": "min",
-        "time": 1501804800000,
+        "time": null,
         "calender": {
           "operator": "",
           "number": "",
@@ -28,7 +24,7 @@
       "timeConfig": {
         "keepValueFlag": false,
         "timeMode": "max",
-        "time": 1577404800000,
+        "time": null,
         "calender": {
           "operator": "",
           "number": "",
@@ -37,10 +33,9 @@
       }
     },
     "interval": {
-      "number": 3,
-      "units": "esriTimeUnitsMonths"
+      "number": 0,
+      "units": "esriTimeUnitsMilliseconds"
     },
-    "displayAllData": true
-  },
-  "customDateFormat": ""
+    "displayAllData": false
+  }
 }

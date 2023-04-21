@@ -10,19 +10,19 @@
   "showShapefileWidget": false,
   "showCoordinatesWidget": false,
   "allowShapefilesUpload": false,
-  "areaUnits": "Hectares",
+  "areaUnits": "SquareFeet",
   "maxFeaturesForAnalysis": 1000,
   "searchTolerance": 20,
   "traverseUnit": "uSSurveyFeet",
   "traverseDirectionUnit": "decimalDegree",
-  "defaultBufferDistance": 0,
-  "defaultBufferUnit": "UNIT_METER",
+  "defaultBufferDistance": 2,
+  "defaultBufferUnit": "UNIT_KILOMETER",
   "reportSettings": {
     "printTaskURL": "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
     "footnote": "",
     "logo": "${appPath}/widgets/Screening/images/default-logo.png",
-    "columnTitleColor": "#c6d9ec",
-    "reportTitle": "Screening Report",
+    "columnTitleColor": "#097f84",
+    "reportTitle": "Reporte",
     "noDataConfiguredText": "No hay datos",
     "naTextConfiguredValue": "N/A",
     "customOptions": [],
@@ -38,10 +38,15 @@
       {
         "layerId": "61b61a8e28874492b409132a53e45de3",
         "url": "https://services8.arcgis.com/BtkRLT3YBKaVGV3g/arcgis/rest/services/VISOR_ACUIGIS_WFL1/FeatureServer/3",
-        "name": "Estaciones_de_Monitoreo",
-        "placeholder": "",
+        "name": "Estaciones de Monitoreo",
+        "placeholder": "Estación de Monitoreo",
         "searchFields": [
-          "Pto_Muestreo"
+          "Pto_Muestreo",
+          "Municipio",
+          "Gestor",
+          "Estado",
+          "Coord_x",
+          "Coord_y"
         ],
         "displayField": "Pto_Muestreo",
         "exactMatch": false,
@@ -342,619 +347,686 @@
       "url": "https://services8.arcgis.com/BtkRLT3YBKaVGV3g/arcgis/rest/services/VISOR_ACUIGIS_WFL1/FeatureServer/42",
       "geometryType": "esriGeometryPoint",
       "id": "7074aff87b1f4dd28cf1a2096a9b27f0",
-      "label": "",
+      "label": "Concentración de Mercurio",
       "layerName": "Concentracion_mercurio",
       "layerVersion": 11,
       "selectedFields": {
         "Pto_Muestreo": {
-          "fieldName": "Pto_Muestreo",
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "Pto_Muestreo",
+          "type": "esriFieldTypeString",
+          "alias": "Pto Muestreo",
+          "length": 255,
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20170804": {
-          "fieldName": "F20170804",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20170804",
+          "type": "esriFieldTypeDouble",
+          "alias": "20170804",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20170818": {
-          "fieldName": "F20170818",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20170818",
+          "type": "esriFieldTypeDouble",
+          "alias": "20170818",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20170908": {
-          "fieldName": "F20170908",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20170908",
+          "type": "esriFieldTypeDouble",
+          "alias": "20170908",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20170929": {
-          "fieldName": "F20170929",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20170929",
+          "type": "esriFieldTypeDouble",
+          "alias": "20170929",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20171020": {
-          "fieldName": "F20171020",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20171020",
+          "type": "esriFieldTypeDouble",
+          "alias": "20171020",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20171110": {
-          "fieldName": "F20171110",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20171110",
+          "type": "esriFieldTypeDouble",
+          "alias": "20171110",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20171201": {
-          "fieldName": "F20171201",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20171201",
+          "type": "esriFieldTypeDouble",
+          "alias": "20171201",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20171219": {
-          "fieldName": "F20171219",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20171219",
+          "type": "esriFieldTypeDouble",
+          "alias": "20171219",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180109": {
-          "fieldName": "F20180109",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180109",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180109",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180130": {
-          "fieldName": "F20180130",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180130",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180130",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180213": {
-          "fieldName": "F20180213",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180213",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180213",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180228": {
-          "fieldName": "F20180228",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180228",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180228",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180321": {
-          "fieldName": "F20180321",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180321",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180321",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180404": {
-          "fieldName": "F20180404",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180404",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180404",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180426": {
-          "fieldName": "F20180426",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180426",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180426",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180512": {
-          "fieldName": "F20180512",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180512",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180512",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180517": {
-          "fieldName": "F20180517",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180517",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180517",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180530": {
-          "fieldName": "F20180530",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180530",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180530",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180612": {
-          "fieldName": "F20180612",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180612",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180612",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180628": {
-          "fieldName": "F20180628",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180628",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180628",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180710": {
-          "fieldName": "F20180710",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180710",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180710",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180725": {
-          "fieldName": "F20180725",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180725",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180725",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180808": {
-          "fieldName": "F20180808",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180808",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180808",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180822": {
-          "fieldName": "F20180822",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180822",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180822",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180831": {
-          "fieldName": "F20180831",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180831",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180831",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180913": {
-          "fieldName": "F20180913",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180913",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180913",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20180926": {
-          "fieldName": "F20180926",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20180926",
+          "type": "esriFieldTypeDouble",
+          "alias": "20180926",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20181009": {
-          "fieldName": "F20181009",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20181009",
+          "type": "esriFieldTypeDouble",
+          "alias": "20181009",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20181025": {
-          "fieldName": "F20181025",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20181025",
+          "type": "esriFieldTypeDouble",
+          "alias": "20181025",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20181101": {
-          "fieldName": "F20181101",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20181101",
+          "type": "esriFieldTypeDouble",
+          "alias": "20181101",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20181112": {
-          "fieldName": "F20181112",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20181112",
+          "type": "esriFieldTypeDouble",
+          "alias": "20181112",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20181122": {
-          "fieldName": "F20181122",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20181122",
+          "type": "esriFieldTypeDouble",
+          "alias": "20181122",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20181205": {
-          "fieldName": "F20181205",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20181205",
+          "type": "esriFieldTypeDouble",
+          "alias": "20181205",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20181218": {
-          "fieldName": "F20181218",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20181218",
+          "type": "esriFieldTypeDouble",
+          "alias": "20181218",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190108": {
-          "fieldName": "F20190108",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190108",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190108",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190122": {
-          "fieldName": "F20190122",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190122",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190122",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190206": {
-          "fieldName": "F20190206",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190206",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190206",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190220": {
-          "fieldName": "F20190220",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190220",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190220",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190305": {
-          "fieldName": "F20190305",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190305",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190305",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190321": {
-          "fieldName": "F20190321",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190321",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190321",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190403": {
-          "fieldName": "F20190403",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190403",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190403",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190423": {
-          "fieldName": "F20190423",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190423",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190423",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190507": {
-          "fieldName": "F20190507",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190507",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190507",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190523": {
-          "fieldName": "F20190523",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190523",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190523",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190531": {
-          "fieldName": "F20190531",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190531",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190531",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190613": {
-          "fieldName": "F20190613",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190613",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190613",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190625": {
-          "fieldName": "F20190625",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190625",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190625",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190709": {
-          "fieldName": "F20190709",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190709",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190709",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190723": {
-          "fieldName": "F20190723",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190723",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190723",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190802": {
-          "fieldName": "F20190802",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190802",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190802",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190831": {
-          "fieldName": "F20190831",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190831",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190831",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190910": {
-          "fieldName": "F20190910",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190910",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190910",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20190925": {
-          "fieldName": "F20190925",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20190925",
+          "type": "esriFieldTypeDouble",
+          "alias": "20190925",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20191008": {
-          "fieldName": "F20191008",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20191008",
+          "type": "esriFieldTypeDouble",
+          "alias": "20191008",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20191022": {
-          "fieldName": "F20191022",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20191022",
+          "type": "esriFieldTypeDouble",
+          "alias": "20191022",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20191104": {
-          "fieldName": "F20191104",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20191104",
+          "type": "esriFieldTypeDouble",
+          "alias": "20191104",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20191119": {
-          "fieldName": "F20191119",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20191119",
+          "type": "esriFieldTypeDouble",
+          "alias": "20191119",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20191129": {
-          "fieldName": "F20191129",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20191129",
+          "type": "esriFieldTypeDouble",
+          "alias": "20191129",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20191212": {
-          "fieldName": "F20191212",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20191212",
+          "type": "esriFieldTypeDouble",
+          "alias": "20191212",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         },
         "F20191227": {
-          "fieldName": "F20191227",
-          "format": {
-            "digitSeparator": false,
-            "places": 6
-          },
-          "isEditable": true,
-          "label": null,
-          "visible": true
+          "name": "F20191227",
+          "type": "esriFieldTypeDouble",
+          "alias": "20191227",
+          "editable": true,
+          "nullable": true,
+          "defaultValue": null,
+          "description": null,
+          "isViewOverride": false,
+          "label": ""
         }
       },
       "layerId": "42",
       "baseURL": "https://services8.arcgis.com/BtkRLT3YBKaVGV3g/arcgis/rest/services/VISOR_ACUIGIS_WFL1/FeatureServer/",
+      "groupbyfieldCheckBoxStatus": true,
       "sortInfo": {
         "sortOrder": "Asc",
         "sortingField": "esriCTCountField"
@@ -964,7 +1036,7 @@
   "showCircleTool": true,
   "groupbyfieldCheckBoxStatus": true,
   "allowVisibleLayerAnalysisOnly": false,
-  "lengthUnits": "Kilometers",
+  "lengthUnits": "Feet",
   "downloadSettings": {
     "type": "syncEnable",
     "layers": [

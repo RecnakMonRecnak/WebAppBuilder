@@ -95,11 +95,12 @@
         },
         "placeholderIndex": 1,
         "id": "_25",
-        "name": "TimeSlider",
+        "name": "Test_Xunta_Widget",
+        "label": "Consulta ICM",
         "version": "2.26",
         "closeable": true,
-        "uri": "widgets/TimeSlider/Widget",
-        "config": "configs/TimeSlider/config__25.json"
+        "IsController": false,
+        "uri": "widgets/Test_Xunta_Widget/Widget"
       },
       {
         "position": {
@@ -109,10 +110,11 @@
         },
         "placeholderIndex": 1,
         "id": "_26",
-        "name": "Swipe",
+        "name": "TimeSlider",
         "version": "2.26",
         "closeable": true,
-        "uri": "widgets/Swipe/Widget"
+        "uri": "widgets/TimeSlider/Widget",
+        "config": "configs/TimeSlider/config__26.json"
       },
       {
         "position": {
@@ -122,10 +124,11 @@
         },
         "placeholderIndex": 1,
         "id": "_27",
-        "name": "AddData",
+        "name": "Swipe",
         "version": "2.26",
         "closeable": true,
-        "uri": "widgets/AddData/Widget"
+        "uri": "widgets/Swipe/Widget",
+        "config": "configs/Swipe/config__27.json"
       },
       {
         "uri": "widgets/OverviewMap/Widget",
@@ -237,12 +240,11 @@
             "version": "2.26",
             "IsController": false,
             "uri": "widgets/Screening/Widget",
-            "config": "configs/Screening/config_widgets_Screening_Widget_41.json",
-            "id": "widgets_Screening_Widget_41"
+            "config": "configs/Screening/config_widgets_Screening_Widget_42.json",
+            "id": "widgets_Screening_Widget_42"
           }
         ],
-        "label": "Grupo 0",
-        "icon": "widgets/Screening/images/icon.png?wab_dv=2.26"
+        "label": "Grupo 0"
       }
     ],
     "panel": {
@@ -262,7 +264,17 @@
       "bottom": 0
     },
     "itemId": "2b9035a387ee4d3499d157a0e9a63150",
-    "mapOptions": {},
+    "mapOptions": {
+      "extent": {
+        "xmin": -74883.18305941559,
+        "ymin": 4594889.144993229,
+        "xmax": -53175.067026454795,
+        "ymax": 4606755.993634487,
+        "spatialReference": {
+          "wkid": 102100
+        }
+      }
+    },
     "id": "map",
     "portalUrl": "https://esrimastergis.maps.arcgis.com",
     "mapRefreshInterval": {
@@ -282,58 +294,59 @@
     },
     "widgets": [
       {
-        "name": "Test_Xunta_Widget",
-        "version": "2.26",
-        "IsController": false,
-        "uri": "widgets/Test_Xunta_Widget/Widget",
-        "index": 2,
-        "id": "widgets_Test_Xunta_Widget_Widget_42"
-      },
-      {
         "uri": "widgets/LayerList/Widget",
         "version": "2.26",
         "id": "widgets_LayerList_Widget_19",
         "name": "LayerList",
-        "index": 3
+        "index": 2,
+        "config": "configs/LayerList/config_widgets_LayerList_Widget_19.json"
       },
       {
         "uri": "widgets/Legend/Widget",
         "version": "2.26",
         "id": "widgets_Legend_Widget_18",
         "name": "Legend",
-        "index": 4
+        "index": 3
       },
       {
         "name": "Print",
         "version": "2.26",
         "uri": "widgets/Print/Widget",
-        "config": "configs/Print/config_widgets_Print_Widget_36.json",
-        "index": 5,
-        "id": "widgets_Print_Widget_36"
-      },
-      {
-        "name": "Share",
-        "version": "2.26",
-        "uri": "widgets/Share/Widget",
-        "config": "configs/Share/config_widgets_Share_Widget_38.json",
-        "index": 6,
-        "id": "widgets_Share_Widget_38"
+        "config": "configs/Print/config_widgets_Print_Widget_38.json",
+        "index": 4,
+        "id": "widgets_Print_Widget_38"
       },
       {
         "name": "Measurement",
         "version": "2.26",
         "uri": "widgets/Measurement/Widget",
-        "config": "configs/Measurement/config_widgets_Measurement_Widget_39.json",
-        "index": 7,
-        "id": "widgets_Measurement_Widget_39"
+        "config": "configs/Measurement/config_widgets_Measurement_Widget_37.json",
+        "index": 5,
+        "id": "widgets_Measurement_Widget_37"
+      },
+      {
+        "name": "Share",
+        "version": "2.26",
+        "uri": "widgets/Share/Widget",
+        "config": "configs/Share/config_widgets_Share_Widget_39.json",
+        "index": 6,
+        "id": "widgets_Share_Widget_39"
       },
       {
         "name": "BasemapGallery",
         "version": "2.26",
         "uri": "widgets/BasemapGallery/Widget",
         "config": "configs/BasemapGallery/config_widgets_BasemapGallery_Widget_40.json",
-        "index": 8,
+        "index": 7,
         "id": "widgets_BasemapGallery_Widget_40"
+      },
+      {
+        "name": "AddData",
+        "version": "2.26",
+        "uri": "widgets/AddData/Widget",
+        "config": "configs/AddData/config_widgets_AddData_Widget_41.json",
+        "index": 9,
+        "id": "widgets_AddData_Widget_41"
       }
     ],
     "groups": []
@@ -503,7 +516,7 @@
     }
   },
   "loadingPage": {
-    "backgroundColor": "#024059",
+    "backgroundColor": "#0b6a57",
     "backgroundImage": {
       "visible": true,
       "uri": "configs/loading/images/background.jpeg",
@@ -512,7 +525,7 @@
     },
     "loadingGif": {
       "visible": true,
-      "uri": "/webappbuilder/apps/4/configs/loading/images/predefined_loading_4.gif",
+      "uri": "/webappbuilder/apps/5/configs/loading/images/predefined_loading_4.gif",
       "width": 34,
       "height": 34
     }
@@ -531,5 +544,5 @@
     "settings": {}
   },
   "logoLink": "https://experience.arcgis.com/experience/564647a712924e6088d6ef3404a595e3/?draft=true",
-  "logoAlt": "Web Acuigis"
+  "logoAlt": "WEB ACUIGIS"
 }
