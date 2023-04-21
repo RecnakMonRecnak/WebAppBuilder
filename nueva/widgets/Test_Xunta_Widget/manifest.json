@@ -1,0 +1,25 @@
+{
+  "name": "Test_Xunta_Widget",
+  "label": "Filtro Indice Concentracion Metales",
+  "2D": true,
+  "3D": false,
+  "platform": "HTML",
+  "version": "2.26",
+  "wabVersion": "2.26",
+  "author": "Jorge Dominguez Lopez",
+  "description": "Este widget contiene la prueba final de WAB del master Esri 2023",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+		"inPanel":true,
+		"hasLocale": true,
+		"hasStyle":true,
+		"hasConfig":false,
+		"hasUIFile":true,
+		"hasSettingPage":false,
+		"hasSettingUIFile":false,
+		"hasSettingLocale":false,
+		"hasSettingStyle":false,
+		"IsController":false
+  }
+}
